@@ -63,6 +63,18 @@ body{
     gap:9px;
 }
 
+#days{
+    position: absolute;
+    top:-3px;
+    font-family:'Red Hat Text', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.0800000429153442px;
+    text-align: center;
+    color:var(--pink);
+}
+
 #day-indicator{
     position: relative;
     display: flex;
@@ -175,6 +187,18 @@ body{
     border-top-left-radius: 8px;
 }
 
+#hours{
+    position: absolute;
+    top:-3px;
+    font-family:'Red Hat Text', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.0800000429153442px;
+    text-align: center;
+    color:var(--pink);
+}
+
 .minutes-div{
     display: flex;
     flex-direction: column;
@@ -228,6 +252,18 @@ body{
     top:0;
     border-top-right-radius: 8px;
     border-top-left-radius: 8px;
+}
+
+#minutes{
+    position: absolute;
+    top:-3px;
+    font-family:'Red Hat Text', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.0800000429153442px;
+    text-align: center;
+    color:var(--pink);
 }
 
 .seconds-div{
@@ -284,6 +320,18 @@ body{
     border-top-left-radius: 8px;
 }
 
+#seconds{
+    position: absolute;
+    top:-3px;
+    font-family:'Red Hat Text', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 71px;
+    letter-spacing: -1.0800000429153442px;
+    text-align: center;
+    color:var(--pink);
+}
+
 .footer-div{
     display:flex;
     justify-content: center;
@@ -291,7 +339,10 @@ body{
     gap:32px;
 }
 
-
+svg path:hover{
+    fill:var(--pink);
+    cursor: pointer;
+}
 
 @media screen and (min-width:1024px){
     body{
@@ -392,6 +443,17 @@ body{
         border-top-left-radius: 8px;
     }
 
+    #days{
+        position: absolute;
+        top:35px;
+        font-family:'Red Hat Text', sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 71px;
+        letter-spacing: -2.4000000953674316px;
+        text-align: center;
+    }
+
     .name{
         font-family:'Red Hat Text', sans-serif; 
         font-size: 14px;
@@ -455,6 +517,17 @@ body{
         border-top-left-radius: 8px;
     }
 
+    #hours{
+        position: absolute;
+        top:35px;
+        font-family:'Red Hat Text', sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 71px;
+        letter-spacing: -2.4000000953674316px;
+        text-align: center;
+    }
+
     .minutes-div{
         display: flex;
         flex-direction: column;
@@ -508,6 +581,17 @@ body{
         top:0;
         border-top-right-radius: 8px;
         border-top-left-radius: 8px;
+    }
+
+    #minutes{
+        position: absolute;
+        top:35px;
+        font-family:'Red Hat Text', sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 71px;
+        letter-spacing: -2.4000000953674316px;
+        text-align: center;
     }
 
     .seconds-div{
@@ -564,11 +648,23 @@ body{
         border-top-left-radius: 8px;
     }
 
+    #seconds{
+        position: absolute;
+        top:35px;
+        font-family:'Red Hat Text', sans-serif;
+        font-size: 80px;
+        font-weight: 700;
+        line-height: 71px;
+        letter-spacing: -2.4000000953674316px;
+        text-align: center;
+    }
+
     .footer-div{
         display:flex;
         justify-content: center;
         align-items: center;
         gap:32px;
     }
+
 }
 
