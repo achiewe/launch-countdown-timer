@@ -44,7 +44,7 @@ Users should be able to:
 - Vanilla js
 
 ### What I learned
-general whiat is the news in my project is that in javascript i used a new function through which, sets a target date and time, and then calculates and displays the remaining days, hours, minutes, and seconds until that target date and time. 
+general Which is a novelty in my project relates to javascript. i used a new function through which, sets a target date and time, and then calculates and displays the remaining days, hours, minutes, and seconds until that target date and time. 
 
 
 ## Author
