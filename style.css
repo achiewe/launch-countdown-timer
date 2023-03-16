@@ -1,0 +1,574 @@
+*{
+    box-sizing: border-box;
+}
+
+:root{
+    --white:#FFFFFF;
+    --pink:#FB5E84;
+    --purple:#8385A9;
+    --light-blue:#343650;
+    --black:#000000;
+    --dark-blue:#191A23;
+}
+
+body{
+    width: 100%;
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:305px;
+    background-color:#1D1E28;
+    background-image: url('./images/bg-stars.svg'), url('./images/pattern-hills.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position:0, bottom right 10%;
+    background-size: contain, 1024px 178px;
+}
+
+.main-container{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:327px;
+    gap:54px;
+}
+
+.main-container h1{
+    text-transform: uppercase;
+    font-family:'Red Hat Text', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 6.136363506317139px;
+    text-align: center;
+    color:var(--white);
+}
+
+.main-div{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap:16px;
+    width:327px;
+}
+
+.days-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:9px;
+}
+
+#day-indicator{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70px;
+    height:71px;
+    background-color: var(--light-blue);
+    border-radius: 8px;
+    box-shadow: inset 0px -5px 0px var(--dark-blue);
+    overflow: hidden;
+}
+
+#day-indicator::before{
+    position:absolute;
+    top:30px;
+    left:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+    
+}
+
+#day-indicator::after{
+    position:absolute;
+    top:30px;
+    right:-3.5px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+    
+}
+
+#top-half{
+    position: absolute;
+    background-color: var(--black);
+    opacity: 0.15;
+    width:70px;
+    height:33px;
+    top:0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.name{
+    font-family:'Red Hat Text', sans-serif; 
+    font-size: 7px;
+    font-weight: 700;
+    line-height: 9px;
+    letter-spacing: 2.9593749046325684px;
+    text-align: center;
+    color:var(--purple);
+}
+
+.hours-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:9px;
+}
+
+#hour-indicator{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70px;
+    height:71px;
+    background-color: var(--light-blue);
+    box-shadow: inset 0px -5px 0px var(--dark-blue);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#hour-indicator::before{
+    position:absolute;
+    top:30px;
+    left:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+}
+
+#hour-indicator::after{
+    position:absolute;
+    top:30px;
+    right:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+}
+
+#top-half1{
+    position: absolute;
+    background-color: var(--black);
+    opacity: 0.15;
+    width:70px;
+    height:33px;
+    top:0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.minutes-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:9px;
+}
+
+#minutes-indicator{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70px;
+    height:71px;
+    background-color: var(--light-blue);
+    box-shadow: inset 0px -5px 0px var(--dark-blue);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+#minutes-indicator::before{
+    position:absolute;
+    top:30px;
+    left:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+}
+
+#minutes-indicator::after{
+    position:absolute;
+    top:30px;
+    right:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+}
+
+#top-half2{
+    position: absolute;
+    background-color: var(--black);
+    opacity: 0.15;
+    width:70px;
+    height:33px;
+    top:0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.seconds-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:9px;
+}
+
+#seconds-indicator{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:70px;
+    height:71px;
+    background-color: var(--light-blue);
+    box-shadow: inset 0px -5px 0px var(--dark-blue);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#seconds-indicator::before{
+    position:absolute;
+    top:30px;
+    left:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+}
+
+#seconds-indicator::after{
+    position:absolute;
+    top:30px;
+    right:-3px;
+    content: "";
+    background-color: var(--dark-blue);
+    width:8px;
+    height:8px;
+    border-radius: 5px;
+}
+
+#top-half3{
+    position: absolute;
+    background-color: var(--black);
+    opacity: 0.15;
+    width:70px;
+    height:33px;
+    top:0;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+}
+
+.footer-div{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:32px;
+}
+
+
+
+@media screen and (min-width:1024px){
+    body{
+        width: 100%;
+        height:100vh;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:305px;
+        background-color:#1D1E28;
+        background-image: url('./images/bg-stars.svg'), url('./images/pattern-hills.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position:0, bottom right 10%;
+        background-size: contain, 100% 178px;
+    }
+
+    .main-container{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width:688px;
+        gap:54px;
+    }
+
+    .main-container h1{
+        font-family:'Red Hat Text', sans-serif;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 7.5px;
+        text-align: center;
+    }
+
+    .main-div{
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap:32px;
+        width:688px;
+    }
+
+    .days-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+    }
+
+    #day-indicator{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:148px;
+        height:150px;
+        background-color: var(--light-blue);
+        border-radius: 8px;
+        box-shadow: inset 0px -10px 0px var(--dark-blue);
+        overflow: hidden;
+    }
+
+    #day-indicator::before{
+        position:absolute;
+        top:64px;
+        left:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+        
+    }
+
+    #day-indicator::after{
+        position:absolute;
+        top:64px;
+        right:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+        
+    }
+    
+    #top-half{
+        position: absolute;
+        background-color: var(--black);
+        opacity: 0.15;
+        width:148px;
+        height:70px;
+        top:0;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .name{
+        font-family:'Red Hat Text', sans-serif; 
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 19px;
+        letter-spacing: 5.918749809265137px;
+        text-align: center;
+    }
+    
+    .hours-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+    }
+    
+    #hour-indicator{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:148px;
+        height:150px;
+        background-color: var(--light-blue);
+        border-radius: 8px;
+        box-shadow: inset 0px -10px 0px var(--dark-blue);
+        overflow: hidden;
+    }
+    
+    #hour-indicator::before{
+        position:absolute;
+        top:64px;
+        left:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+    }
+    
+    #hour-indicator::after{
+        position:absolute;
+        top:64px;
+        right:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+    }
+    
+    #top-half1{
+        position: absolute;
+        background-color: var(--black);
+        opacity: 0.15;
+        width:148px;
+        height:70px;
+        top:0;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .minutes-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+    }
+    
+    #minutes-indicator{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:148px;
+        height:150px;
+        background-color: var(--light-blue);
+        border-radius: 8px;
+        box-shadow: inset 0px -10px 0px var(--dark-blue);
+        overflow: hidden;
+    }
+    
+    
+    #minutes-indicator::before{
+        position:absolute;
+        top:64px;
+        left:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+    }
+    
+    #minutes-indicator::after{
+        position:absolute;
+        top:64px;
+        right:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+    }
+    
+    #top-half2{
+        position: absolute;
+        background-color: var(--black);
+        opacity: 0.15;
+        width:148px;
+        height:70px;
+        top:0;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .seconds-div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:16px;
+    }
+    
+    #seconds-indicator{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width:148px;
+        height:150px;
+        background-color: var(--light-blue);
+        border-radius: 8px;
+        box-shadow: inset 0px -10px 0px var(--dark-blue);
+        overflow: hidden;
+    }
+    
+    #seconds-indicator::before{
+        position:absolute;
+        top:64px;
+        left:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+    }
+    
+    #seconds-indicator::after{
+        position:absolute;
+        top:64px;
+        right:-6px;
+        content: "";
+        background-color: var(--dark-blue);
+        width:12px;
+        height:12px;
+        border-radius: 10px;
+    }
+    
+    #top-half3{
+        position: absolute;
+        background-color: var(--black);
+        opacity: 0.15;
+        width:148px;
+        height:70px;
+        top:0;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+
+    .footer-div{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:32px;
+    }
+}
+
